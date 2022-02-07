@@ -1,0 +1,59 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    background: #000;
+    padding-top: 60px;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    background-color: #282828;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+header h1 {
+    color: #FFF;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 768px){
+    header {
+        justify-content: normal;
+    }
+    header h1 {
+        margin-left: 30px;
+    }
+}
+
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.container {
+    column-count: 1;
+    column-gap: 0;
+}
+
+@media screen and (min-width: 768px){
+    .container {
+        column-count: 2;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .container {
+        column-count: 3;
+    }
+}
