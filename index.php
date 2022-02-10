@@ -14,7 +14,11 @@
         </header>
         <main class="container">
             <?php
+                $sort_by_lastmod = function($a, $b) {
+                    return filemtime($b) - filemtime($a);
+                  };
                 $images = array_reverse(glob('./assets/app/images/*'));
+                usort( $images, $sort_by_lastmod );
                 foreach($images as $image) {
                     echo '<a href="', $image, '" data-lightbox="images" data-title="', basename($image), '"><img src="', $image, '" alt="', basename($image), '" loading="lazy"></a>';
                 }
